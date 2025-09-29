@@ -1,8 +1,11 @@
 import Navbar from "./components/Navbar/navbar";
-import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/footer";
+import { Routes, Route, Link } from "react-router-dom";
 
-function App() {
+// Pages 
+import Home from "./pages/Home/Home";
+
+function Home() {
   return (
     <>
       <Navbar />
@@ -12,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
