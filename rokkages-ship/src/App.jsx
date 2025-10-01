@@ -1,18 +1,24 @@
-import Navbar from "./components/Navbar/navbar";
-import Footer from "./components/Footer/footer";
-import { Routes, Route, Link } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Home from "./pages/Home/Home.jsx";
 
-// Pages 
-import Home from "./pages/Home/Home";
+import { Routes, Route } from "react-router-dom";
 
-function Home() {
+function App() {
   return (
-    <>
+    <div>
+
       <Navbar />
-      <Home />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
       <Footer />
-    </>
+
+    </div>
   );
 }
 
-export default Home;
+export default App;
+
