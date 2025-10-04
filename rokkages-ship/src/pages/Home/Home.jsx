@@ -12,7 +12,17 @@ export default function Home() {
     >
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
-        <div className="max-w-md">
+        <div
+          className="max-w-md"
+          style={{
+            outline: "3px solid #fff",
+            outlineOffset: "8px",
+            borderRadius: "16px",
+            padding: "24px",
+            display: "inline-block",
+            background: "rgba(0,0,0,0.3)",
+          }}
+        >
           <img
             className="mask mask-circle"
             src={myProfilePic}
@@ -23,7 +33,7 @@ export default function Home() {
             This is my personal portfolio.
           </p>
           <Link to="/projects">
-            <button className="btn btn-primary">My Designs and Projects</button>
+            <button className="btn btn-primary">My Projects</button>
           </Link>
         </div>
       </div>
