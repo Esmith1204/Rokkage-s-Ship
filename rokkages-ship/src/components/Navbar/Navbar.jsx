@@ -7,7 +7,7 @@ export default function Navbar() {
                 </button>
             </div>
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">Rokkage's Ship</a>
+                <a href="/" className="btn btn-ghost text-xl">Elijah's Ship</a>
             </div>
             <div className="flex-none">
                 <button className="btn btn-square btn-ghost">
