@@ -17,7 +17,8 @@ export default function Navbar() {
                     </a>
                     </li>
 
-                    <li><a>Contact Me</a></li>
+                        <li><Link to="/contact">Contact Me</Link></li>
+
                     <li>
 
                         <details>
