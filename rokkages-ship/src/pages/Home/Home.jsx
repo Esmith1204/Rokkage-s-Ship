@@ -1,4 +1,4 @@
-import myImage from "../../assets/grid.jpg";
+import myImage from "../../assets/Background.jpg";
 import myProfilePic from "../../assets/Rokkage's Ship PFP.jpg";
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,7 @@ export default function Home() {
             borderRadius: "16px",
             padding: "24px",
             display: "inline-block",
-            background: "rgba(0,0,0,0.3)",
+            background: "rgba(0,0,0,0.7)",
           }}
         >
           <img
