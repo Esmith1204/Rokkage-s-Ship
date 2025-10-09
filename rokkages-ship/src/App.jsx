@@ -5,6 +5,7 @@ import ContactMe from "./pages/ContactMe/ContactMe.jsx";
 import Projects from "./pages/Projects/Projects.jsx";
 
 import { Routes, Route } from "react-router-dom";
+import { motion } from "motion/react";
 
 function App() {
   return (
