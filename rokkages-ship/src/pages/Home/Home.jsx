@@ -1,7 +1,7 @@
 import myImage from "../../assets/Background.jpg";
 import myProfilePic from "../../assets/Rokkage's Ship PFP.jpg";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Home() {
   const boxVariants = {
@@ -10,6 +10,7 @@ export default function Home() {
   };
 
   return (
+    
     <div
       className="flex flex-col min-h-screen items-center justify-center relative"
       style={{
@@ -33,9 +34,11 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.1 }}
       >
+        
         <span className="block text-base md:text-xl font-light tracking-widest uppercase">
           This is
         </span>
+
       </motion.div>
       <motion.div
         className="relative text-neutral-content px-4 md:px-1 lg:px-32 flex flex-col items-center z-20"
