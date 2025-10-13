@@ -6,7 +6,8 @@ export default function ContactMe() {
             <div className="hero-content flex-col lg:flex-row">
                 <div className="rounded-xl border-2 border-base-300 p-8 bg-base-100 shadow-md">
                     <h1 className="text-5xl font-bold">Contact Me</h1>
-                    <p className="py-6 underline">
+                    <p className="py-6">Feel free to reach out to me via email or LinkedIn!</p>
+                    <p className="py-0.5 underline">
                         <a href="mailto:elijahiya1204@gmail.com">elijahiya1204@gmail.com</a>
                     </p>
                     <p className="py-1 underline">

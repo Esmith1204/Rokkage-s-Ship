@@ -37,7 +37,11 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a>Designs</a>
+                  <a
+                    href="/designs"
+                  >
+                    Designs
+                  </a>
                 </li>
                 <li>
                   <Link to="/projects"> <strong>All Work</strong></Link>

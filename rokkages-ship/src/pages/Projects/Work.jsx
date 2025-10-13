@@ -1,4 +1,6 @@
 import rokkage31 from "../../assets/Rokkage31_Bot.png";
+import zothacks from "../../assets/zothacks_background.png";
+import { Link } from "react-router-dom";
 
 export default function Work() {
     return (
@@ -10,7 +12,6 @@ export default function Work() {
                         Below is a list of my projects and designs I've worked on!
                     </p>
 
-                    
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
                         {/*Copy and paste attribute for future projects replacing href and src*/}
                         <a
@@ -36,14 +37,26 @@ export default function Work() {
                             </div>
                         </a>
 
-                        <div className="card bg-base-100 shadow-lg opacity-80">
-                            <div className="h-48 bg-neutral flex items-center justify-center text-white">
-                            </div>
+                        <Link
+                            to="/designs"
+                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden"
+                            aria-label="Open Designs Gallery"
+                        >
+                            <figure className="h-48 w-full overflow-hidden bg-neutral">
+                                <img
+                                    src={zothacks}
+                                    alt="Rokkage31 project screenshot"
+                                    className="w-full h-full object-cover"
+                                />
+                            </figure>
                             <div className="card-body items-center text-center">
-                                <h2 className="card-title">Coming Soon</h2>
-                                <p className="text-sm"></p>
+                                <h2 className="card-title">Designs</h2>
+                                <p className="text-sm">A collection of my design work and art.</p>
+                                <div className="card-actions">
+                                    <button className="btn btn-primary">Designs Gallery</button>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
 
                         <div className="card bg-base-100 shadow-lg opacity-80">
                             <div className="h-48 bg-neutral flex items-center justify-center text-white"></div>

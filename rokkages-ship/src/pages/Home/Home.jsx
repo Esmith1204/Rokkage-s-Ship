@@ -89,6 +89,9 @@ export default function Home() {
           </div>
           <div className="flex-1 flex flex-col justify-center items-center min-w-0">
             <p className="mb-8 text-lg md:text-2xl break-words text-center">A personal portfolio by Elijah.</p>
+            <p className="mb-4 text-base md:text-lg break-words text-center max-w-md">
+              Designer with an interest in UI/UX and web development. 
+            </p>
             <Link to="/projects" className="w-full md:w-auto flex justify-center">
               <button className="btn btn-primary text-lg md:text-2xl px-10 py-4 md:px-14 md:py-6 mt-4 w-full md:w-auto">
                 My Work
