@@ -40,7 +40,7 @@ export default function Navbar() {
                   <a>Designs</a>
                 </li>
                 <li>
-                  <Link to="/projects">All Projects</Link>
+                  <Link to="/projects"> <strong>All Work</strong></Link>
                 </li>
               </ul>
             </details>

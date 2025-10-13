@@ -91,7 +91,7 @@ export default function Home() {
             <p className="mb-8 text-lg md:text-2xl break-words text-center">A personal portfolio by Elijah.</p>
             <Link to="/projects" className="w-full md:w-auto flex justify-center">
               <button className="btn btn-primary text-lg md:text-2xl px-10 py-4 md:px-14 md:py-6 mt-4 w-full md:w-auto">
-                My Projects
+                My Work
               </button>
             </Link>
           </div>
