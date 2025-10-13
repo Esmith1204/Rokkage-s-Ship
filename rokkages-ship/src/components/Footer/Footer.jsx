@@ -39,7 +39,7 @@ export default function Footer() {
             <img src={github} alt="GitHub" width={24} height={24} />
           </a>
           <a
-            href="https://instagram.com/your-instagram-username"
+            href="https://www.instagram.com/elijah._s"
             target="_blank"
             rel="noopener noreferrer"
           >
