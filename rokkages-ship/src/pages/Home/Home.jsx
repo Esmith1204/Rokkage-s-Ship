@@ -1,6 +1,5 @@
 import myImage from "../../assets/Background.jpg";
 import myProfilePic from "../../assets/Rokkage's Ship PFP.jpg";
-import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
 export default function Home() {
