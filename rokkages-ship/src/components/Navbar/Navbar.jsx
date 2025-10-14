@@ -38,7 +38,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a
-                    href="/designs"
+                    href="#/designs"
                   >
                     Designs
                   </a>

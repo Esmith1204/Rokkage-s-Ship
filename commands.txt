@@ -1,3 +1,4 @@
 cd rokkages-ship
 npm install
 npm run dev
+npx vite build
