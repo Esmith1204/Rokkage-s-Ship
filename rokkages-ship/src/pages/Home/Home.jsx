@@ -92,11 +92,11 @@ export default function Home() {
             <p className="mb-4 text-base md:text-lg break-words text-center max-w-md">
               Designer with an interest in UI/UX and web development. 
             </p>
-            <Link to="/projects" className="w-full md:w-auto flex justify-center">
+            <a href="#/projects" className="w-full md:w-auto flex justify-center">
               <button className="btn btn-primary text-lg md:text-2xl px-10 py-4 md:px-14 md:py-6 mt-4 w-full md:w-auto">
                 My Work
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </motion.div>

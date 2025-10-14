@@ -4,9 +4,9 @@ export default function Navbar() {
   return (
     <div className="navbar bg-base-100 shadow-sm z-50 relative">
       <div className="flex-1">
-        <Link to="/" className="btn btn-ghost text-xl">
+        <a href="#/" className="btn btn-ghost text-xl">
           Elijah's Ship
-        </Link>
+        </a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -21,7 +21,7 @@ export default function Navbar() {
           </li>
           
           <li>
-            <Link to="/contact">Contact Me</Link>
+            <a href="#/contact">Contact Me</a>
           </li>
           <li>
             <details>
@@ -44,7 +44,7 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <Link to="/projects"> <strong>All Work</strong></Link>
+                  <a href="#/projects"> <strong>All Work</strong></a>
                 </li>
               </ul>
             </details>
