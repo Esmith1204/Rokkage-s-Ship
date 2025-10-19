@@ -2,3 +2,5 @@ cd rokkages-ship
 npm install
 npm run dev
 npx vite build
+
+Move dist folder outside of rokkages-ship after building
