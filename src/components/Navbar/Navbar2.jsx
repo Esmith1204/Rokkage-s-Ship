@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import StaggeredMenu from './StaggeredMenu';
 import logo from "../../assets/Portfolio_Logo.svg";
-import { createPortal } from 'react-dom';
 
 export default function Navbar2() {
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const menuItems = [
         { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
@@ -18,7 +19,11 @@ export default function Navbar2() {
     ];
 
     return (
-        <div className="fixed top-0 left-0 w-full z-[9999] h-[100vh]">
+        <div
+            className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
+                menuOpen ? 'h-[100vh] pointer-events-auto' : 'h-auto pointer-events-none'
+            }`}
+        >
             <StaggeredMenu
                 position="right"
                 items={menuItems}
@@ -31,8 +36,8 @@ export default function Navbar2() {
                 colors={['#B19EEF', '#5227FF']}
                 logoUrl={logo}
                 accentColor="#5227FF"
-                onMenuOpen={() => console.log('Menu opened')}
-                onMenuClose={() => console.log('Menu closed')}
+                onMenuOpen={() => setMenuOpen(true)}
+                onMenuClose={() => setMenuOpen(false)}
             />
         </div>
     );

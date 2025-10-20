@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import myImage from "../../assets/Background.jpg";
 import myProfilePic from "../../assets/Rokkage's Ship PFP.jpg";
 import { motion } from "motion/react";
