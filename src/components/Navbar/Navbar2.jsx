@@ -20,10 +20,10 @@ export default function Navbar2() {
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${
-                menuOpen ? 'h-[100vh] pointer-events-auto' : 'h-auto pointer-events-none'
-            }`}
+            className={`fixed top-0 left-0 w-full z-[9999] h-[100vh] overflow-visible transition-all duration-300 ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'
+                }`}
         >
+
             <StaggeredMenu
                 position="right"
                 items={menuItems}
