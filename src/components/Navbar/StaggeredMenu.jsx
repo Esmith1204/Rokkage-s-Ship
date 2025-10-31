@@ -2,6 +2,7 @@ import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 export const StaggeredMenu = ({
+  onItemClick,
   position = 'right',
   colors = ['#B19EEF', '#5227FF'],
   items = [],
@@ -310,6 +311,29 @@ export const StaggeredMenu = ({
     animateText(target);
   }, [playOpen, playClose, animateIcon, animateColor, animateText, onMenuOpen, onMenuClose]);
 
+  //Added function to close menu on item click and navigate
+  const handleItemNav = useCallback((e, link) => {
+    e.preventDefault();
+
+    openRef.current = false;
+    setOpen(false);
+
+    playClose();
+
+    animateIcon(false);
+    animateColor(false);
+    animateText(false);
+
+    const NAV_DELAY = 360; 
+    setTimeout(() => {
+      if (link && link.startsWith('#')) {
+        window.location.hash = link.replace(/^#/, '');
+      } else {
+        window.location.href = link;
+      }
+    }, NAV_DELAY);
+  }, [playClose, animateIcon, animateColor, animateText]);
+
   return (
     <div
       className={`sm-scope z-40 ${isFixed ? 'fixed top-0 left-0 w-screen h-screen overflow-hidden' : 'w-full h-full'}`}
@@ -418,6 +442,11 @@ export const StaggeredMenu = ({
                       href={it.link}
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}
+
+                      //Three event handlers to ensure menu closes.
+                      onMouseDown={(e) => handleItemNav(e, it.link)}
+                      onTouchStart={(e) => handleItemNav(e, it.link)}
+                      onClick={(e) => handleItemNav(e, it.link)}
                     >
                       <span className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
                         {it.label}

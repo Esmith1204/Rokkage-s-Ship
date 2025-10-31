@@ -38,6 +38,7 @@ export default function Navbar2() {
                 accentColor="#5227FF"
                 onMenuOpen={() => setMenuOpen(true)}
                 onMenuClose={() => setMenuOpen(false)}
+                onItemClick={() => setMenuOpen(false)}
             />
         </div>
     );
