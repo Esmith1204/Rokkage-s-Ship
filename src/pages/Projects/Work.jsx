@@ -1,10 +1,22 @@
 import rokkage31 from "../../assets/Rokkage31_Bot.png";
 import zothacks from "../../assets/zothacks_background.png";
+import DarkVeil from "../../components/Background/background.jsx";
 
 export default function Work() {
     return (
-        <div className="hero bg-base-200 min-h-screen py-12">
-            <div className="hero-content flex-col w-full">
+        <div className="min-h-screen" style={{ position: 'relative', overflow: 'hidden' }}>
+            {/* Background Component */}
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+                <DarkVeil 
+                    hueShift={20}
+                    noiseIntensity={0.05}
+                    scanlineIntensity={0.1}
+                    speed={0.3}
+                    scanlineFrequency={0.5}
+                    warpAmount={0.3}
+                />
+            </div>
+            <div className="flex flex-col w-full py-20" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="w-full max-w-6xl mx-auto">
                     <h1 className="text-5xl font-bold text-center">My Work</h1>
                     <p className="py-6 text-center">
