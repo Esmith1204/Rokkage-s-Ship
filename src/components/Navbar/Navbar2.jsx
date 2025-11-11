@@ -4,6 +4,7 @@ import logo from "../../assets/Portfolio_Logo.svg";
 
 export default function Navbar2() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [animating, setAnimating] = useState(false);
 
     const menuItems = [
         { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
@@ -18,10 +19,31 @@ export default function Navbar2() {
         { label: 'LinkedIn', link: 'https://www.linkedin.com/in/elijah-smith-71319429a' }
     ];
 
+    const handleMenuOpen = () => {
+        setMenuOpen(true);
+        setAnimating(true);
+    };
+
+    const handleMenuClose = () => {
+        setMenuOpen(false);
+        setTimeout(() => setAnimating(false), 400);
+    };
+
+    const handleItemClick = () => {
+        // Menu will close, keep wrapper full height during animation
+        setAnimating(true);
+        setTimeout(() => {
+            setMenuOpen(false);
+            setAnimating(false);
+        }, 400);
+    };
+
     return (
         <div
-            className={`fixed top-0 left-0 w-full z-[9999] h-[100vh] overflow-visible transition-all duration-300 ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'
-                }`}
+            className={`fixed top-0 left-0 w-full z-[9999] ${
+                menuOpen || animating ? 'h-[100vh]' : 'h-auto'
+            } ${menuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+            style={{ transition: 'none' }}
         >
 
             <StaggeredMenu
@@ -36,9 +58,9 @@ export default function Navbar2() {
                 colors={['#B19EEF', '#5227FF']}
                 logoUrl={logo}
                 accentColor="#5227FF"
-                onMenuOpen={() => setMenuOpen(true)}
-                onMenuClose={() => setMenuOpen(false)}
-                onItemClick={() => setMenuOpen(false)}
+                onMenuOpen={handleMenuOpen}
+                onMenuClose={handleMenuClose}
+                onItemClick={handleItemClick}
             />
         </div>
     );

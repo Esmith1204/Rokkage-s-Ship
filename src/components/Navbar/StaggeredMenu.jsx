@@ -318,6 +318,9 @@ export const StaggeredMenu = ({
     openRef.current = false;
     setOpen(false);
 
+    onMenuClose?.();
+    onItemClick?.();
+
     playClose();
 
     animateIcon(false);
@@ -332,7 +335,7 @@ export const StaggeredMenu = ({
         window.location.href = link;
       }
     }, NAV_DELAY);
-  }, [playClose, animateIcon, animateColor, animateText]);
+  }, [playClose, animateIcon, animateColor, animateText, onMenuClose, onItemClick]);
 
   return (
     <div

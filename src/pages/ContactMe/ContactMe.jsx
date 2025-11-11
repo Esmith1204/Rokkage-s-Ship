@@ -1,7 +1,9 @@
+// import DarkVeil from '../../Background/background.jsx';
+
 export default function ContactMe() {
     return (
         <div className="hero bg-base-200 min-h-screen">
-              <div className="hero-overlay"></div>
+            <div className="hero-overlay"></div>
 
             <div className="hero-content flex-col lg:flex-row">
                 <div className="rounded-xl border-2 border-base-300 p-8 bg-base-100 shadow-md">
@@ -13,6 +15,11 @@ export default function ContactMe() {
                     <p className="py-1 underline">
                         <a href="https://www.linkedin.com/in/elijah-smith-71319429a" target="_blank" rel="noopener noreferrer">My LinkedIn</a>
                     </p>
+
+                    {/* Dark Veil Component for visual effect */}
+                    {/* <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+                        <DarkVeil />
+                    </div> */}
                 </div>
             </div>
         </div>
