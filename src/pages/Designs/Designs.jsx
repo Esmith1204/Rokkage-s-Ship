@@ -5,6 +5,7 @@ import resumeworkshop from "../../assets/Resume_Workshop.png";
 import socaldrop from "../../assets/Socal_Drop.png";
 import yoyomeetup from "../../assets/yoyo_meetup.png";
 import zothacks from "../../assets/zothacks_background.png";
+import timely from "../../assets/Timely!! Design.png";
 import DarkVeil from "../../components/Background/background.jsx";
 import Masonry from "../../components/Masonry/Masonry.jsx";
 
@@ -46,12 +47,18 @@ export default function Designs() {
             height: 600,
             url: '#',
         },
+        {
+            id: 'timely',
+            img: timely,
+            height: 750,
+            url: '#',
+        },
     ];
 
     // Dynamically calculates the minimum height needed for masonry layout
     const calculatedMinHeight = useMemo(() => {
-        const columns = 5; 
-        const gap = 16;
+        const columns = 5; // Max columns on large screens
+        const gap = 10;
         const colHeights = new Array(columns).fill(0);
         
         designItems.forEach(item => {
@@ -60,7 +67,7 @@ export default function Designs() {
             colHeights[minCol] += height + gap;
         });
         
-        return Math.max(...colHeights) + 5;
+        return Math.max(...colHeights) + 0; // Add padding
     }, [designItems]);
 
     return (
