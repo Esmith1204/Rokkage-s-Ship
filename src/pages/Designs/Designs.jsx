@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import lamp from "../../assets/Lamp.png";
 import mfdoom from "../../assets/mfdoom.png";
 import resumeworkshop from "../../assets/Resume_Workshop.png";
@@ -5,135 +6,107 @@ import socaldrop from "../../assets/Socal_Drop.png";
 import yoyomeetup from "../../assets/yoyo_meetup.png";
 import zothacks from "../../assets/zothacks_background.png";
 import DarkVeil from "../../components/Background/background.jsx";
+import Masonry from "../../components/Masonry/Masonry.jsx";
 
 export default function Designs() {
+    const designItems = [
+        {
+            id: 'mfdoom',
+            img: mfdoom,
+            height: 600, 
+            url: '#',
+        },
+        {
+            id: 'zothacks',
+            img: zothacks,
+            height: 800,
+            url: '#',
+        },
+        {
+            id: 'socaldrop',
+            img: socaldrop,
+            height: 700,
+            url: '#',
+        },
+        {
+            id: 'yoyomeetup',
+            img: yoyomeetup,
+            height: 850,
+            url: '#',
+        },
+        {
+            id: 'resumeworkshop',
+            img: resumeworkshop,
+            height: 750,
+            url: '#',
+        },
+        {
+            id: 'lamp',
+            img: lamp,
+            height: 600,
+            url: '#',
+        },
+    ];
+
+    // Dynamically calculates the minimum height needed for masonry layout
+    const calculatedMinHeight = useMemo(() => {
+        const columns = 5; 
+        const gap = 16;
+        const colHeights = new Array(columns).fill(0);
+        
+        designItems.forEach(item => {
+            const minCol = colHeights.indexOf(Math.min(...colHeights));
+            const height = item.height / 2; 
+            colHeights[minCol] += height + gap;
+        });
+        
+        return Math.max(...colHeights) + 5;
+    }, [designItems]);
+
     return (
-        <div style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
+        <>
             {/* Background Component */}
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
+            <div style={{ 
+                position: 'fixed', 
+                top: 0, 
+                left: 0, 
+                width: '100%', 
+                height: '100%', 
+                zIndex: -1 
+            }}>
                 <DarkVeil 
                     hueShift={20}
                     noiseIntensity={0.05}
                     scanlineIntensity={0.1}
-                    speed={0.3}
+                    speed={0.5}
                     scanlineFrequency={0.5}
                     warpAmount={0.3}
                 />
             </div>
-            <div className="flex flex-col w-full py-20 pb-12" style={{ position: 'relative', zIndex: 1 }}> 
-                <div className="w-full max-w-6xl mx-auto">
-
-                    <h1 className="text-5xl font-bold text-center">My Designs</h1>
-                    <p className="py-6 text-center">
+            
+            <div className="flex flex-col w-full py-20 pb-32" style={{ position: 'relative', zIndex: 0 }}>
+                <div className="w-full max-w-7xl mx-auto px-4">
+                    <h1 className="text-5xl font-bold text-center mb-4">My Designs</h1>
+                    <p className="py-6 text-center mb-8">
                         Some designs and art I've worked on in the past. Going to add some more in the future :)
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-                        {/*Copy and paste attribute for future projects replacing href and src*/}
-
-                        {/*MF DOOM Drawing*/}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden flex justify-center"
-                            aria-label="MF DOOM Drawing"
-                        >
-                            <figure className="flex items-center justify-center p-4">
-                                <img
-                                    src={mfdoom}
-                                    alt="MF DOOM design"
-                                    className="block"
-                                    style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px" }}
-                                />
-                            </figure>
-                        </a>
-
-                        {/*ZotHacks Background*/}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden flex justify-center"
-                            aria-label="Zothacks Background"
-                        >
-                            <figure className="flex items-center justify-center p-4">
-                                <img
-                                    src={zothacks}
-                                    alt="Zothacks Background"
-                                    className="block"
-                                    style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px" }}
-                                />
-                            </figure>
-                        </a>
-
-                        {/*Socal Drop Graphic*/}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden flex justify-center"
-                            aria-label="Socal Drop Graphic"
-                        >
-                            <figure className="flex items-center justify-center p-4">
-                                <img
-                                    src={socaldrop}
-                                    alt="Socal Drop Graphic"
-                                    className="block"
-                                    style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px" }}
-                                />
-                            </figure>
-                        </a>
-
-                        {/*Yoyo Meetup Graphic*/}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden flex justify-center"
-                            aria-label="Yoyo Meetup Graphic"
-                        >
-                            <figure className="flex items-center justify-center p-4">
-                                <img
-                                    src={yoyomeetup}
-                                    alt="Yoyo Meetup Graphic"
-                                    className="block"
-                                    style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px" }}
-                                />
-                            </figure>
-                        </a>
-                        
-                        {/*Resume Workshop Graphic*/}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden flex justify-center"
-                            aria-label="Resume Workshop Graphic"
-                        >
-                            <figure className="flex items-center justify-center p-4">
-                                <img
-                                    src={resumeworkshop}
-                                    alt="Resume Workshop Graphic"
-                                    className="block"
-                                    style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px" }}
-                                />
-                            </figure>
-                        </a>
-
-                        {/*Lamp Graphic*/}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="card bg-base-100 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 overflow-hidden flex justify-center"
-                            aria-label="Lamp Graphic"
-                        >
-                            <figure className="flex items-center justify-center p-4">
-                                <img
-                                    src={lamp}
-                                    alt="Lamp Graphic"
-                                    className="block"
-                                    style={{ width: "auto", height: "auto", maxWidth: "100%", maxHeight: "400px" }}
-                                />
-                            </figure>
-                        </a>
+                    
+                    {/* Masonry Animation - Dynamically sized container */}
+                    <div className="w-full" style={{ minHeight: `${calculatedMinHeight}px` }}>
+                        <Masonry
+                            items={designItems}
+                            ease="power3.out"
+                            duration={0.6}
+                            stagger={0.05}
+                            animateFrom="bottom"
+                            scaleOnHover={true}
+                            hoverScale={0.95}
+                            blurToFocus={true}
+                            colorShiftOnHover={false}
+                        />
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

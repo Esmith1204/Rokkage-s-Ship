@@ -9,7 +9,7 @@ export default function ContactMe() {
                     hueShift={20}
                     noiseIntensity={0.05}
                     scanlineIntensity={0.1}
-                    speed={0.3}
+                    speed={0.5}
                     scanlineFrequency={0.5}
                     warpAmount={0.3}
                 />
