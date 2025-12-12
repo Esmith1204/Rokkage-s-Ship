@@ -8,6 +8,7 @@ import zothacks from "../../assets/zothacks_background.png";
 import timely from "../../assets/Timely!! Design.png";
 import DarkVeil from "../../components/Background/background.jsx";
 import Masonry from "../../components/Masonry/Masonry.jsx";
+import fullMetal from "../../assets/Fullmetal Alchemist.png";
 
 export default function Designs() {
     const designItems = [
@@ -50,6 +51,12 @@ export default function Designs() {
         {
             id: 'timely',
             img: timely,
+            height: 750,
+            url: '#',
+        },
+        {
+            id: 'fullmetal',
+            img: fullMetal,
             height: 750,
             url: '#',
         },

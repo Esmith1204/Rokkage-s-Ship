@@ -96,7 +96,7 @@ export default function Work() {
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">Designs</h2>
-                                <p className="text-sm">A collection of my designs I've worked on.</p>
+                                <p className="text-sm">A collection of designs I've worked on.</p>
                                 <div className="card-actions">
                                     <button className="btn btn-primary">View Designs</button>
                                 </div>
