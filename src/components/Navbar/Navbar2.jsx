@@ -10,7 +10,7 @@ export default function Navbar2() {
         { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
         { label: 'Resume', ariaLabel: 'My resume', link: 'https://drive.google.com/file/d/1UlfsXEJaaEKoNEYPhtVddxRv0WwTTJgS/view?usp=sharing' },
         { label: 'Projects', ariaLabel: 'View my projects', link: '#/projects' },
-        { label: 'Contact', ariaLabel: 'Get in touch', link: '#/contact' }
+        { label: 'About', ariaLabel: 'Get in touch', link: '#/about' }
     ];
 
     const socialItems = [
