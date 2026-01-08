@@ -1,7 +1,7 @@
 import React from 'react';
 import DarkVeil from '../../components/Background/background.jsx';
 import ChromaGrid from './ChromaCard.jsx';
-import PFP from '../../assets/Rokkage\'s Ship PFP.jpg';
+import PFP from '../../assets/portfolio_about_me.jpg';
 import GitHub from '../../assets/GitHub.svg';
 import Instagram from '../../assets/Instagram.svg';
 import LinkedIn from '../../assets/LinkedIn.svg';
