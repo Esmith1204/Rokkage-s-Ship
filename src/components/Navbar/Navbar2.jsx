@@ -8,7 +8,7 @@ export default function Navbar2() {
 
     const menuItems = [
         { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-        { label: 'Resume', ariaLabel: 'My resume', link: 'https://drive.google.com/file/d/1lt4lcx-85WM37cdsy8jBM3OvTI2T51N0/view?usp=drive_link' },
+        { label: 'Resume', ariaLabel: 'My resume', link: 'https://drive.google.com/file/d/1FoDzJY7Ty5JtQXZ8GROThGtozagXZXkr/view?usp=sharing' },
         { label: 'Projects', ariaLabel: 'View my projects', link: '#/projects' },
         { label: 'About', ariaLabel: 'Get in touch', link: '#/about' }
     ];
